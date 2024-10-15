@@ -41,8 +41,11 @@ const ContactButton = () => {
     );
 }
 const ResumeButton = () =>{
+    const handleClick = () => {
+        window.open('../resume/JunXie.pdf', '_blank'); // 替换为你的PDF文件路径
+    };
     return(
-        <ButtonStyle style={{marginRight: '20px'}}>
+        <ButtonStyle style={{marginRight: '20px'}} onClick={handleClick}>
             My resume
         </ButtonStyle>
     )
