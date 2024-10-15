@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/blog/static/css/main.eda9c12b.css",
+    "main.js": "/blog/static/js/main.830bd6b6.js",
+    "static/media/WechatIMG79.jpg": "/blog/static/media/WechatIMG79.2b0e090addf596138e4d.jpg",
+    "static/media/WechatIMG76.jpg": "/blog/static/media/WechatIMG76.1a580f84a4a6654ecf7a.jpg",
+    "static/media/WechatIMG75.jpg": "/blog/static/media/WechatIMG75.5af1cee5a696cb5d2b99.jpg",
+    "static/media/WechatIMG78.jpg": "/blog/static/media/WechatIMG78.d46c98ada2425593e576.jpg",
+    "static/media/WechatIMG71.jpg": "/blog/static/media/WechatIMG71.cdeac4b910b519745421.jpg",
+    "static/media/WechatIMG72.jpg": "/blog/static/media/WechatIMG72.fa192c88f1b8f20a00d7.jpg",
+    "static/media/school-solid.svg": "/blog/static/media/school-solid.79719068e8564b37dc27a6b5137d1634.svg",
+    "index.html": "/blog/index.html",
+    "static/media/code-solid.svg": "/blog/static/media/code-solid.b7455d098386cea7acc43ff0e77bdd00.svg",
+    "static/media/linkedin-brands-solid.svg": "/blog/static/media/linkedin-brands-solid.633a312873229ec1d806b66f9d770fb7.svg",
+    "static/media/tiktok-brands-solid.svg": "/blog/static/media/tiktok-brands-solid.30ae8eea28fed6b2ee0d8315af47544a.svg",
+    "main.eda9c12b.css.map": "/blog/static/css/main.eda9c12b.css.map",
+    "main.830bd6b6.js.map": "/blog/static/js/main.830bd6b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eda9c12b.css",
+    "static/js/main.830bd6b6.js"
+  ]
+}
