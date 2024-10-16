@@ -7,7 +7,10 @@ import research from '../projectImage/WechatIMG76.jpg'
 import jsonclasses from '../projectImage/WechatIMG78.jpg'
 import jsonWeb from '../projectImage/WechatIMG79.jpg'
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons"; 
 import './projectContent.css'
+
 const ProjectContentContainer = ({project}) =>{
     const [isOpen, setDia] = useState(false)
     const openDia = () => setDia(true)
@@ -31,17 +34,20 @@ const ProjectContentContainer = ({project}) =>{
     const containerStyle = {
         display: 'flex',
         flexDirection: 'column',
+        maxWidth:'100%',
+        flex:'1 1 auto',
+        
     }
 
     const diaStyle = {
         position: 'fixed',
         top: 0,
         left: 0,
-
         width: '100%',
         height: '100%',
-        backgroundColor: 'rgba(0, 0, 0, 0.7)', // 半透明背景
-        backdropFilter: 'blur(10px)', // 背景模糊
+        backgroundColor: '#11111199',
+        '-webkit-backdrop-filter': 'blur(10px)',
+        backdropFilter: 'blur(10px)',
         display: 'flex',
         justifyContent: 'center',
         zIndex: 1000, // 确保模态框位于最上层
@@ -82,7 +88,7 @@ const ProjectContentContainer = ({project}) =>{
                     transition={{transition}}
                     variants={animateVariants}
                     style={{margin:'1.5rem 0',    maxWidth: '650px',
-                        maxHeight: '92 %', overflowY:'auto',    borderRadius: '10px'}}
+                        maxHeight: '92 %', overflowY:'auto',   borderRadius: '10px'}}
                     >
                          <ProjectDetail project={project} onClose={closeDia}/>
                 </motion.div>
@@ -95,7 +101,6 @@ const ProjectContentContainer = ({project}) =>{
 const ProjectImgContainer = ({src, alt, onClick}) => {
     const containerStyle= {
         borderRadius: '15px',
-        flex: 1,
         backgroundColor: '#232323',
         padding: '40px 40px 0px 40px',
         boxSizing: 'border-box',
@@ -103,15 +108,17 @@ const ProjectImgContainer = ({src, alt, onClick}) => {
         overflow:'hidden',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',      // 限制容器最大宽度
+        alignItems: 'center', 
+        maxWidth:'100%',     // 限制容器最大宽度
+        flex:'1 1 auto'
+        
 
     }
     const imageStyle = {
         borderRadius: '15px',     // 保持边框圆角效果
-        objectFit: 'cover',       // 确保图片填充容器
-        width: '100%',            // 图片宽度占据容器的100%
-        maxWidth: '400px',        // 最大宽度限制
-        aspectRatio: '16 / 9',     // 统一宽高比例
+        objectFit: 'cover',       // 确保图片填充容器        // 图片宽度占据容器的100%
+        maxWidth: '100%',        // 最大宽度限制
+        aspectRatio: '16 / 9', 
     }
     return(
         <div style={containerStyle} onClick={onClick}>
@@ -148,6 +155,11 @@ const ProjectDetail = ({project,onClose}) => {
     }
     return(
         <div className="project-container">
+            <div style={{textAlign:'right'}}>
+                <button style={{cursor:'pointer',border: 'none',padding:'0.8rem',backgroundColor:'#111111',color:'white', fontSize:'25px'}} onClick={onClose} aria-label="Close">
+                     <FontAwesomeIcon icon={faXmark} /> 
+            </button>
+            </div>
             <img src={project.src} alt={project.alt} style={{borderRadius:'15px'}}/>
             <div style={{padding:'2rem'}}>
             <div className='archivo-black-regular' style={titileStyle}>{project.title}</div>
@@ -193,26 +205,16 @@ const Link = ({children, action}) => {
 }
 
 const LineContainer = ({children}) =>{
-    const lineStyle = {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', // 设置列数和最小宽度
-        gap: '40px', // 设置间距
-        alignItems: 'flex-start', // 垂直居中对齐
-        boxSizing: 'border-box',
 
-    }
     return(
-        <div style={lineStyle}>
+        <div className="link-container">
             {children}
         </div>
     )
 }
 
 const ProjectContent = () =>{
-    const contentStyle = {
-        marginTop: '25px',
-        boxSizing:'border-box'
-    }
+
     const projects = [
         {src: mobileProject, alt:'Mobile Project', title: ' Online Order Assistant', subTitle:'JavaScript - HTML - CSS - NoSQL',des:'I independently developed a real-world project that has been deployed and is currently used by several Asian supermarkets in Australia.',
             detail:['This mobile application is designed to provide convenient online order management services for Asian supermarkets in Australia. ',
@@ -279,13 +281,13 @@ const ProjectContent = () =>{
         }
     ]
     return (
-        <div style={contentStyle}>
-             <LineContainer>
-                {projects.map((project, index) => (
-                        <ProjectContentContainer key={index} project={project} />
-                    ))}
-            </LineContainer>
-        </div>
+        
+        <LineContainer>
+        {projects.map((project, index) => (
+                <ProjectContentContainer key={index} project={project} />
+            ))}
+        </LineContainer>
+        
     )
 }
 

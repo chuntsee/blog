@@ -20,12 +20,14 @@ function ProfilePage(){
         maxWidth: '1000px',
         margin: '0 auto',
         flexGrow: '1',
-        paddingLeft:'55px'
+        paddingLeft:'55px',
         
     }
     const sectionStyle = {
         marginBottom: '200px',
-        width: '100%'
+        width: '100%', // 在小屏幕上使用100%宽度
+        boxSizing: 'border-box',
+
     }
     const imgStyle = {
         width: '25px', height: '25px', borderRadius:'5px',padding:'2px' 
@@ -56,7 +58,7 @@ function ProfilePage(){
         boxShadow: '2px 0 5px rgba(0, 0, 0, 0.1)', // 阴影效果
         boxSizing: 'border-box',
         backgroundColor: '#080808',
-        marginRight:'50px'
+        
     };
     
     const menuItemStyle = {

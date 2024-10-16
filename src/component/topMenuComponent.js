@@ -27,8 +27,9 @@ const TopMenu = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
-        padding: '10px 0',
-        backdropFilter: 'blur(10px)' /* 模糊效果 */
+        backgroundColor: '#11111199',
+        backdropFilter: 'blur(10px)',
+        '-webkit-backdrop-filter': 'blur(10px)'
     }
     return (
         <div style={menuStyle}>

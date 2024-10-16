@@ -4,7 +4,7 @@ import { scroller } from 'react-scroll';
 const ButtonStyle = ({children,style, onClick}) => {
     return(
         <motion.button
-            whileHover = {{scale:1.1, backgroundColor:'#0FFF9D',color:'rgb(0, 255, 157)' }}
+            whileHover = {{scale:1.1, backgroundColor:'#0FFF9D',color:'white' }}
             whileTap = {{scale: 0.9 }}
             style={{
                 padding: '10px 10px',

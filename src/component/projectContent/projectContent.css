@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-
     background-color: #111111;
     
   }
@@ -23,12 +22,21 @@
 }
 .project-des-style{
   font-size: 22px;
+
 }
 .link-style{
   font-size: 22px;
   color: #0FFF9D;
   margin-top: 1rem;
   cursor: pointer,
+}
+.link-container{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.4rem;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 @media (max-width: 768px) {
   .project-title-style{
@@ -43,5 +51,8 @@
   }
   .link-style{
     font-size: 20px;
+  }
+  .link-container{
+    grid-template-columns: 1fr;
   }
 }
