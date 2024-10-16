@@ -3,6 +3,7 @@ import AnimatedDiv from "../animatedComponent";
 import codeIcon from '../icons/code-solid.svg'
 import schoolIcon from '../icons/school-solid.svg'
 import './aboutContent.css'
+import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 const AboutDescription = () =>{
 
     return (
@@ -80,12 +81,14 @@ const SkillSectionContainer = () => {
                     <div className='archivo-black-regular'>Education</div>
                 </div>
                 </AnimatedDiv>
-                
-                <EducationContainer degree={'Master of Information Technology'} uni={'University of New South Wales'} date={'Sep 2022 - Jan 2024'}/>
-                
-                
-                <EducationContainer degree={'Bachelor of Software Engineering (Honour)'} uni={'Monash University'} date={'Mar 2018 - Jul 2022'}/>
-            
+                <div style={{display:'flex',flex:'1',flexDirection:'column'}}>
+                    <AnimatedDiv width="100%">
+                    <EducationContainer degree={'Master of Information Technology'} uni={'University of New South Wales'} date={'Sep 2022 - Jan 2024'}/>
+                    </AnimatedDiv>
+                    <AnimatedDiv width="100%">
+                    <EducationContainer degree={'Bachelor of Software Engineering (Honour)'} uni={'Monash University'} date={'Mar 2018 - Jul 2022'}/>
+                    </AnimatedDiv>
+                </div>
         </div>
     ) 
 }
@@ -109,23 +112,34 @@ const EducationContainer = ({uni,degree,date}) => {
     const dateStyle = {
         display: 'flex',
         justifyContent:'flex-end',
-        padding:'10px 0'
+        margin: '10px 0',
+        flex:'1',
+
     }
     const lineStyle = {
-        padding:'2px 0'
+        marginTop: '2px',
+        display:'flex',
+        flex:'1',
+
     }
     const containerStyle = {
         fontWeight:'bold', 
-        marginTop:'10px'
+        marginTop:'10px',
+        display: 'flex', // Ensure the container is a flex container
+        flexDirection: 'column', // Stack children vertically
+        flex: '1', // Allow it to grow
+        
     }
     return(
+        
         <div style={containerStyle}>
-            <AnimatedDiv>
             <div className="rubik-normal" style={lineStyle}>{degree}</div>
+            
             <div className="rubik-normal" style={lineStyle}>{uni}</div>
+
             <div className="rubik-normal" style={dateStyle}>{date}</div>
-            </AnimatedDiv>
         </div>
+        
     )
 }
 
