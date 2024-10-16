@@ -11,7 +11,7 @@ const LineContainer = ({left,right,color='white'}) =>{
             <div className='archivo-black-regular exp-line-font' style={{ color:color}}>{left}</div>
             </AnimatedDiv>
             <AnimatedDiv>
-            <div className="exp-line-font">{right}</div>
+            <div className="exp-line-font rubik-normal">{right}</div>
             </AnimatedDiv>
         </div>
     )

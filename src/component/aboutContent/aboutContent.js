@@ -100,7 +100,7 @@ const SkillContainer = ({children}) =>{
     }
 
     return (
-        <div style={skillContent}> {/* 使用 <div> 包裹内容 */}
+        <div className="rubik-normal" style={skillContent}> {/* 使用 <div> 包裹内容 */}
             {children} {/* 渲染 children */}
         </div>
     )
@@ -121,9 +121,9 @@ const EducationContainer = ({uni,degree,date}) => {
     return(
         <div style={containerStyle}>
             <AnimatedDiv>
-            <div style={lineStyle}>{degree}</div>
-            <div style={lineStyle}>{uni}</div>
-            <div style={dateStyle}>{date}</div>
+            <div className="rubik-normal" style={lineStyle}>{degree}</div>
+            <div className="rubik-normal" style={lineStyle}>{uni}</div>
+            <div className="rubik-normal" style={dateStyle}>{date}</div>
             </AnimatedDiv>
         </div>
     )

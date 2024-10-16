@@ -124,6 +124,7 @@ function ProfilePage(){
             <div style={selected === 'intro' ? selectedMenuItemStyle : menuItemStyle} onClick={() => handleClick('intro')}>
                     <Link
                         to="intro" // 目标 section 的 ID
+                        className="rubik-normal"
                         smooth={true} // 启用平滑滚动
                         duration={500} // 动画持续时间
                         spy={true}
@@ -136,6 +137,7 @@ function ProfilePage(){
                 <div style={selected === 'about' ? selectedMenuItemStyle : menuItemStyle}onClick={() => handleClick('about')}>
                     <Link
                         to="about" // 目标 section 的 ID
+                        className="rubik-normal"
                         smooth={true} // 启用平滑滚动
                         duration={500} // 动画持续时间
                         spy={true}
@@ -149,6 +151,7 @@ function ProfilePage(){
                 <div style={selected === 'project' ? selectedMenuItemStyle : menuItemStyle} onClick={() => handleClick('project')}>
                     <Link
                         to="project"
+                        className="rubik-normal"
                         smooth={true}
                         duration={500}
                         spy={true}
@@ -161,6 +164,7 @@ function ProfilePage(){
                 <div style={selected === 'experience' ? selectedMenuItemStyle : menuItemStyle} onClick={() => handleClick('experience')}>
                     <Link
                         to="experience"
+                        className="rubik-normal"
                         smooth={true}
                         duration={500}
                         spy={true}
@@ -172,6 +176,7 @@ function ProfilePage(){
                 </div>
                 <div style={selected === 'contact' ? selectedMenuItemStyle : menuItemStyle} onClick={() => handleClick('contact')}>
                     <Link
+                        className="rubik-normal"
                         to="contact"
                         smooth={true}
                         duration={500}
