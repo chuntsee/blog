@@ -1,33 +1,29 @@
 import React from "react";
-import AnimatedDiv from "./animatedComponent";
-import codeIcon from './icons/code-solid.svg'
-import schoolIcon from './icons/school-solid.svg'
+import AnimatedDiv from "../animatedComponent";
+import codeIcon from '../icons/code-solid.svg'
+import schoolIcon from '../icons/school-solid.svg'
+import './aboutContent.css'
 const AboutDescription = () =>{
-    const desStyle = {
-        fontSize: '22px',
-        textAlign: 'left',
-        display:'flex-colum',
-        marginTop: '25px'
-    }
+
     return (
         <div  className= 'rubik-normal'>
             <AnimatedDiv>
-                <div  style={desStyle}>
+                <div  className='des'>
                     I am a recent graduate with a Bachelor's degree in Software Engineering from Monash University and a Master's in Information Technology from the University of New South Wales, with an overall average score of 75. 
                 </div>
             </AnimatedDiv>
             <AnimatedDiv>
-                <div style={desStyle}>
+                <div className='des'>
                     I have experience in developing web and mobile applications, with strong expertise in both front-end and back-end development. I specialize in front-end development, turning prototypes into fully functional user interfaces. 
                 </div>
             </AnimatedDiv>
             <AnimatedDiv>
-                <div style={desStyle}>
+                <div className='des'>
                 Additionally, I have experience with backend server development, database implementation, and a solid understanding of network protocols. I excel at building efficient RESTful APIs that seamlessly integrate front-end and back-end systems.
                 </div>
             </AnimatedDiv>
             <AnimatedDiv>
-                <div style={desStyle}>
+                <div className='des'>
                     I am passionate about coding, eager to learn new technologies, and excited about new challenges. If you're looking for a dedicated developer ready to make an impact, feel free to reach out. I'm also open to relocation if needed!
                 </div>
             </AnimatedDiv>
@@ -36,14 +32,7 @@ const AboutDescription = () =>{
 }
 
 const SkillSectionContainer = () => {
-    const titleStyle = {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        fontSize: '22px',
-        marginTop: '25px'
-    }   
+
     const skillGridStyle = {
         display: 'flex',
         flexWrap: 'wrap', // 允许换行
@@ -56,7 +45,7 @@ const SkillSectionContainer = () => {
     return (
         <div>
             <AnimatedDiv>
-                <div style={titleStyle}>
+                <div className="titleStyle">
     
                         <img src={codeIcon} alt={"code icon"} style={imgStyle}></img>
                         <div className='archivo-black-regular'>Technical Skills</div>
@@ -86,7 +75,7 @@ const SkillSectionContainer = () => {
                 </AnimatedDiv>
 
                 <AnimatedDiv>
-                <div style={titleStyle}>
+                <div className="titleStyle">
                     <img src={schoolIcon} alt={"school icon"} style={imgStyle}></img>
                     <div className='archivo-black-regular'>Education</div>
                 </div>
@@ -141,14 +130,10 @@ const EducationContainer = ({uni,degree,date}) => {
 }
 
 const AboutContent = () =>{
-    const aboutContainer = {
-        display: 'flex',
-        flexDirection:'row',
-        boxSizing: 'border-box',
-    }
+
     
     return(
-        <div style={aboutContainer}>
+        <div className="about-container">
             <div style={{flex: '1 1 65%', marginRight:'30px', boxSizing: 'border-box'}}>
                 <AboutDescription/>
             </div>

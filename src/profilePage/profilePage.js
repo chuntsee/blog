@@ -1,11 +1,11 @@
 import React, {useEffect, useState}from "react";
-import ProfileContent from "../component/profileContent";
+import ProfileContent from "../component/profileContent/profileContent";
 import TopMenu from "../component/topMenuComponent";
-import SectionTitle from "../component/sectionTitleComponent";
-import {AboutContent} from "../component/aboutContent";
+import SectionTitle from "../component/sectionTitleComponent/sectionTitleComponent";
+import {AboutContent} from "../component/aboutContent/aboutContent";
 import ProjectContent from "../component/projectContent/projectContent";
 import { faPhone,faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import ExContent from "../component/experienceContent";
+import ExContent from "../component/experienceContent/experienceContent";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import AnimatedDiv from "../component/animatedComponent";
 import { motion } from "framer-motion";
@@ -188,21 +188,21 @@ function ProfilePage(){
                 <ProfileContent/>
             </Element>
             <Element name="about" id = "about" style={sectionStyle}>
-                <SectionTitle title={'About'} lineDir={'right'} size={'50px'}/>
+                <SectionTitle title={'About'} lineDir={'right'} />
                 <AboutContent />
             </Element>
             <Element name="project" id="project" style={sectionStyle}>
-                <SectionTitle title={'Project'} lineDir={'left'} size={'50px'}/>
+                <SectionTitle title={'Project'} lineDir={'left'} />
                 <ProjectContent/>
             </Element>
             <Element name="experience" id="experience" style={sectionStyle}>
-                <SectionTitle title={'Experience'} lineDir={'right'} size={'50px'}/> 
+                <SectionTitle title={'Experience'} lineDir={'right'} /> 
                 <ExContent/>
             </Element>
             <Element name="contact" id="contact" style={{...sectionStyle,marginBottom:'300px'}}>
                 
                 <AnimatedDiv width="100%">
-                <div className='archivo-black-regular'style={{fontSize:'80px', justifyContent:'center', display:'flex'}}>
+                <div className='archivo-black-regular'style={{fontSize:'4.5rem', justifyContent:'center', display:'flex'}}>
                     Contact
                 </div>
                 </AnimatedDiv>

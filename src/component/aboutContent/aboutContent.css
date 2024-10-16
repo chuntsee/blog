@@ -1,0 +1,30 @@
+.about-container{
+    display: flex;
+    flex-direction: row;
+}
+.des{
+    font-size: 22px;
+    text-align: left;
+    display: flex;
+    margin-top: 1.5rem;
+}
+.titleStyle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+    .about-container{
+        flex-direction: column;
+
+    }
+    .des{
+        font-size: 20px;
+    }
+    .titleStyle{
+        font-size: 20px;
+    }
+}

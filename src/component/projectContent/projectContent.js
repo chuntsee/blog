@@ -32,36 +32,21 @@ const ProjectContentContainer = ({project}) =>{
         display: 'flex',
         flexDirection: 'column',
     }
-    const projectTitleStyle = {
-        fontSize: '22px', margin:'18px 0', display:'flex',justifyContent:'center'
-    }
-    const projectSubTitleStyle = {
-        ...projectTitleStyle,
-        color: '#0FFF9D'
-    }
-    const projectDesStyle = {
-        fontSize: '22px',
-    }
-    const linkStyle = {
-        ...projectDesStyle,
-        color: '#0FFF9D',
-        marginTop: '10px',
-        cursor: 'pointer',
-        
-    }
+
     const diaStyle = {
         position: 'fixed',
         top: 0,
         left: 0,
-        width: '100vw',
-        height: '100vh',
+
+        width: '100%',
+        height: '100%',
         backgroundColor: 'rgba(0, 0, 0, 0.7)', // 半透明背景
-        backdropFilter: 'blur(5px)', // 背景模糊
+        backdropFilter: 'blur(10px)', // 背景模糊
         display: 'flex',
         justifyContent: 'center',
         zIndex: 1000, // 确保模态框位于最上层
         boxSizing: 'border-box',
-        overflowY:'scroll'
+        
     };
 
     return (
@@ -71,18 +56,17 @@ const ProjectContentContainer = ({project}) =>{
                 <ProjectImgContainer src={project.src} alt={project.alt} onClick={openDia}/>
             </AnimatedDiv>
                 <AnimatedDiv width="100%">
-                <div className="archivo-black-regular" style={projectTitleStyle}>{project.title}</div>
+                <div className="archivo-black-regular project-title-style" >{project.title}</div>
                 </AnimatedDiv>
                 <AnimatedDiv>
-                <div className='rubik-normal'style={projectSubTitleStyle}>{project.subTitle}</div>
+                <div className='rubik-normal project-subtitle-style'>{project.subTitle}</div>
                 </AnimatedDiv>
                 <AnimatedDiv>
-                <div className= 'rubik-normal' style={projectDesStyle}>{project.des}</div>
+                <div className= 'rubik-normal project-des-style'>{project.des}</div>
                 </AnimatedDiv>
                 <AnimatedDiv>
                 <motion.div 
-                className='rubik-normal' 
-                style={linkStyle}
+                className='rubik-normal link-style' 
                 whileHover={{textDecoration:'underline'}}
                 whileTap={{scale: 0.9}}
                 onClick={openDia}
@@ -97,6 +81,8 @@ const ProjectContentContainer = ({project}) =>{
                     animate = 'visible'
                     transition={{transition}}
                     variants={animateVariants}
+                    style={{margin:'1.5rem 0',    maxWidth: '650px',
+                        maxHeight: '92 %', overflowY:'auto',    borderRadius: '10px'}}
                     >
                          <ProjectDetail project={project} onClose={closeDia}/>
                 </motion.div>
@@ -151,7 +137,6 @@ const ProjectDetail = ({project,onClose}) => {
 
     const titileStyle = {
         fontSize: '35px',
-        marginTop: '35px'
     }
     const contentTextStyle ={
         fontSize: '18px',
@@ -164,6 +149,7 @@ const ProjectDetail = ({project,onClose}) => {
     return(
         <div className="project-container">
             <img src={project.src} alt={project.alt} style={{borderRadius:'15px'}}/>
+            <div style={{padding:'2rem'}}>
             <div className='archivo-black-regular' style={titileStyle}>{project.title}</div>
             <div className='rubik-normal' style={{...contentTextStyle, color:'#0FFF9D',marginTop:'20px',}}>{project.subTitle}</div>
             <div>
@@ -181,6 +167,7 @@ const ProjectDetail = ({project,onClose}) => {
 
             <div style={{ textAlign: 'right' }}> {/* 新增的 div */}
                 <Link action={onClose}>{'Exit >'}</Link>
+            </div>
             </div>
         </div>
     )

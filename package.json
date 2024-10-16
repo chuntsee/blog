@@ -1,9 +1,6 @@
 {
-  
-    "homepage": "https://chuntsee.github.io/blog",
-
-  
-  "name": "prac",
+  "homepage": "https://chuntse.com",
+  "name": "blog",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

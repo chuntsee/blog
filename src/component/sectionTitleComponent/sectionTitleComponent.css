@@ -1,0 +1,22 @@
+.section-title{
+    font-size: 50px;
+}
+.right-line{
+    flex-grow: 1;
+    height: 2px;
+    background-color: #7E7E81;
+    margin-left: 1rem;
+}
+.left-line{
+    flex-grow: 1;
+    height: 2px;
+    background-color: #7E7E81;
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .section-title{
+        font-size: 35px;
+    }
+
+  }

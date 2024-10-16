@@ -1,0 +1,27 @@
+.title {
+    font-size: 80px;
+    font-weight: bold;
+    padding-bottom: 1.3rem;
+  }
+.subtitle {
+    font-size: 35px;
+    padding-bottom: 1.3rem;
+}
+.description {
+    font-size: 22px; /* 更小屏幕的描述字体 */
+    padding-right: 12vw;
+  }
+@media (max-width: 768px) {    
+    .title {
+      font-size: 50px; /* 调整标题字体 */
+    }
+  
+    .subtitle {
+      font-size: 25px; /* 调整副标题字体 */
+    }
+  
+    .description {
+      
+      font-size: 20px; /* 调整描述字体 */
+    }
+  }

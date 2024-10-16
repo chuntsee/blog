@@ -1,23 +1,19 @@
 import React from "react";
-import AnimatedDiv from "./animatedComponent";
-import { ContactButton } from "./buttonComponent";
+import AnimatedDiv from "../animatedComponent";
+import { ContactButton } from "../buttonComponent";
+import './profileContent.css'
 const Title = () => {
-    const titleStyle = {fontSize: '80px',
-        fontWeight: 'bold',
-        paddingBottom: '20px'
-    }
+
     return (
-        <div className='archivo-black-regular'style={titleStyle}>
+        <div className='archivo-black-regular title'>
             Hi, I'm Jun Xie.
         </div>
     );
 };
 const SubTitle = () => {
-    const subTitleStyle = {fontSize: '35px',
-        paddingBottom: '20px'
-    }
+
     return(
-        <div className='archivo-black-regular'style={subTitleStyle}>
+        <div className='archivo-black-regular subtitle'>
             
         I'm a <span style={{color:'#0FFF9D'}}>Full Stack Developer</span>
         </div>
@@ -25,12 +21,9 @@ const SubTitle = () => {
     )
 }
 const Description = () =>{
-    const fontSize = {fontSize : '22px',
-        textAlign:'left',
-        paddingRight: '180px'
-    }
+
     return(
-        <div  className= 'rubik-normal'style={fontSize}>
+        <div  className= 'rubik-normal description'>
 Recent graduate and full-stack developer with experience in both web and mobile applications. I specialize in creating efficient backend solutions and intuitive frontend interfaces. I am dedicated, hardworking, and continuously eager to learn and adapt to new technologies.
         </div>
     )
@@ -44,7 +37,8 @@ const ProfileContent = () => {
         height: '100vh',
         justifyContent: 'center',
         boxSizing: 'border-box',
-        paddingTop:'100px'
+        paddingTop:'100px',
+        
     }
     return(
         
