@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6104b30a.css",
-    "main.js": "/static/js/main.5562a380.js",
+    "main.js": "/static/js/main.e587d2a4.js",
     "static/media/WechatIMG79.jpg": "/static/media/WechatIMG79.2b0e090addf596138e4d.jpg",
     "static/media/WechatIMG76.jpg": "/static/media/WechatIMG76.1a580f84a4a6654ecf7a.jpg",
     "static/media/WechatIMG75.jpg": "/static/media/WechatIMG75.5af1cee5a696cb5d2b99.jpg",
@@ -14,10 +14,10 @@
     "static/media/linkedin-brands-solid.svg": "/static/media/linkedin-brands-solid.633a312873229ec1d806b66f9d770fb7.svg",
     "static/media/tiktok-brands-solid.svg": "/static/media/tiktok-brands-solid.30ae8eea28fed6b2ee0d8315af47544a.svg",
     "main.6104b30a.css.map": "/static/css/main.6104b30a.css.map",
-    "main.5562a380.js.map": "/static/js/main.5562a380.js.map"
+    "main.e587d2a4.js.map": "/static/js/main.e587d2a4.js.map"
   },
   "entrypoints": [
     "static/css/main.6104b30a.css",
-    "static/js/main.5562a380.js"
+    "static/js/main.e587d2a4.js"
   ]
 }
